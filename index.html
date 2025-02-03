@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripeFly - Book Your Next Adventure</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <i data-lucide="globe-2" class="brand-icon"></i>
+        <span>TripeFly</span>
+      </div>
+      <div class="nav-right">
+        <div class="language-selector">
+          <i data-lucide="globe-2"></i>
+          <span>EN</span>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <i data-lucide="bell" class="notification-icon"></i>
+        <button class="sign-in-btn">
+          <i data-lucide="user"></i>
+          <span>Sign In</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80" alt="Beautiful beach">
+    <div class="hero-overlay"></div>
+    
+    <div class="booking-card">
+      <div class="booking-tabs">
+        <button class="tab-btn active" data-tab="flight">
+          <i data-lucide="plane"></i>
+          <span>Flight</span>
+        </button>
+        <button class="tab-btn" data-tab="hotel">
+          <i data-lucide="hotel"></i>
+          <span>Hotel</span>
+        </button>
+        <button class="tab-btn" data-tab="tour">
+          <i data-lucide="map"></i>
+          <span>Tour</span>
+        </button>
+        <button class="tab-btn" data-tab="visa">
+          <i data-lucide="croissant"></i>
+          <span>Visa</span>
+        </button>
+      </div>
+
+      <div class="trip-types">
+        <button class="trip-btn active">One Way</button>
+        <button class="trip-btn">Round Trip</button>
+        <button class="trip-btn">Multi City</button>
+      </div>
+
+      <div class="search-form">
+        <div class="form-group">
+          <label>From</label>
+          <input type="text" placeholder="City or Airport">
+        </div>
+        <div class="form-group">
+          <label>To</label>
+          <input type="text" placeholder="City or Airport">
+        </div>
+        <div class="form-group">
+          <label>Journey Date</label>
+          <input type="date">
+        </div>
+        <div class="form-group">
+          <label>Travelers</label>
+          <select>
+            <option>1 Traveler</option>
+            <option>2 Travelers</option>
+            <option>3 Travelers</option>
+            <option>4+ Travelers</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="search-btn">
+        <i data-lucide="search"></i>
+        <span>Search Flights</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="hot-deals">
+    <div class="hot-deals-header">
+      <div class="hot-deals-tabs">
+        <button class="hot-deals-tab active">All</button>
+        <button class="hot-deals-tab">Flight</button>
+        <button class="hot-deals-tab">Tour</button>
+        <button class="hot-deals-tab">Hotel</button>
+        <button class="hot-deals-tab">Others</button>
+      </div>
+    </div>
+
+    <div class="hot-deals-grid">
+      <div class="hot-deal-card">
+        <div class="hot-deal-content">
+          <div class="discount-badge">
+            <span class="discount-percent">15%</span>
+            <span class="discount-text">Discount*</span>
+          </div>
+          <div class="deal-info">
+            <h3>On Int'l Flight Bookings</h3>
+            <p>On base fare, for City Bank American Express® Platinum & Gold credit cards (T&T apply)</p>
+            <div class="card-footer">
+              <span class="expiry">AMEX9523</span>
+              <button class="learn-more">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hot-deal-card">
+        <div class="hot-deal-content">
+          <div class="discount-badge">
+            <span class="discount-percent">15%</span>
+            <span class="discount-text">Discount*</span>
+          </div>
+          <div class="deal-info">
+            <h3>On International Flight Booking</h3>
+            <p>On base fare, for bKash payment. Till 23 Feb'23.</p>
+            <div class="card-footer">
+              <span class="expiry">INTBK025</span>
+              <button class="learn-more">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hot-deal-card">
+        <div class="hot-deal-content">
+          <div class="discount-badge">
+            <span class="discount-percent">10%</span>
+            <span class="discount-text">Discount*</span>
+          </div>
+          <div class="deal-info">
+            <h3>On Domestic Flight Booking</h3>
+            <p>On base fare, for all cards and mobile banking.</p>
+            <div class="card-footer">
+              <span class="expiry">DOMBK025</span>
+              <button class="learn-more">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="featured-deals">
+    <h2>Featured Deals</h2>
+    <div class="deals-grid">
+      <div class="deal-card">
+        <img src="https://images.unsplash.com/photo-1524230659092-07f99a75c013?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dubai">
+        <div class="deal-content">
+          <h3>Dubai Adventure</h3>
+          <div class="deal-price">
+            <span class="price">$599</span>
+            <span class="discount">20% OFF</span>
+          </div>
+        </div>
+      </div>
+      <div class="deal-card">
+        <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Paris">
+        <div class="deal-content">
+          <h3>Paris Getaway</h3>
+          <div class="deal-price">
+            <span class="price">$799</span>
+            <span class="discount">15% OFF</span>
+          </div>
+        </div>
+      </div>
+      <div class="deal-card">
+        <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tokyo">
+        <div class="deal-content">
+          <h3>Tokyo Express</h3>
+          <div class="deal-price">
+            <span class="price">$899</span>
+            <span class="discount">25% OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="special-offers">
+    <div class="special-offers-container">
+      <div class="special-offers-header">
+        <h2>Special Offers</h2>
+        <div class="special-offers-tabs">
+          <button class="special-offers-tab active">All</button>
+          <button class="special-offers-tab">Flight</button>
+          <button class="special-offers-tab">Other</button>
+        </div>
+      </div>
+
+      <div class="special-offers-grid">
+        <div class="special-offer-card">
+          <div class="offer-image">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Cathay Pacific offer">
+          </div>
+          <div class="offer-content">
+            <h3>Get special student fare and extra baggage allowance</h3>
+            <a href="#" class="learn-more-btn">Learn More</a>
+          </div>
+        </div>
+
+        <div class="special-offer-card">
+          <div class="offer-image">
+            <img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Istanbul offer">
+          </div>
+          <div class="offer-content">
+            <h3>Stopover opportunity in Istanbul with Turkish Airlines</h3>
+            <a href="#" class="learn-more-btn">Learn More</a>
+          </div>
+        </div>
+
+        <div class="special-offer-card">
+          <div class="offer-image">
+            <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Additional discount">
+          </div>
+          <div class="offer-content">
+            <h3>Get 3% additional discount</h3>
+            <a href="#" class="learn-more-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="promo-banner">
+    <div class="promo-content">
+      <div class="promo-text">
+        <h2>Download Our Mobile App</h2>
+        <p>Book tickets anytime, anywhere with our mobile app</p>
+        <div class="app-buttons">
+          <button class="app-btn">
+            <i data-lucide="smartphone"></i>
+            Android App
+          </button>
+          <button class="app-btn">
+            <i data-lucide="smartphone"></i>
+            iOS App
+          </button>
+        </div>
+      </div>
+      <div class="promo-image">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Mobile app preview">
+      </div>
+    </div>
+  </div>
+
+  <div class="newsletter-banner">
+    <div class="newsletter-content">
+      <div class="newsletter-text">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get special offers, exclusive deals, and travel updates directly in your inbox</p>
+        <div class="newsletter-features">
+          <div class="feature">
+            <i data-lucide="check-circle"></i>
+            <span>Exclusive Deals</span>
+          </div>
+          <div class="feature">
+            <i data-lucide="check-circle"></i>
+            <span>Travel Tips</span>
+          </div>
+          <div class="feature">
+            <i data-lucide="check-circle"></i>
+            <span>Price Alerts</span>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter-form">
+        <div class="input-group">
+          <i data-lucide="mail"></i>
+          <input type="email" placeholder="Enter your email address">
+        </div>
+        <button class="subscribe-btn">
+          <span>Subscribe Now</span>
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Discover</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Talent & Culture</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">EMI Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Payment Methods</h3>
+        <div class="payment-methods">
+          <img src="payment.png" alt="Payment methods">
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Need Help?</h3>
+        <p>We're here for you 24/7! Reach out to us through:</p>
+        <div class="contact-info">
+          <p><i data-lucide="mail"></i> info@tripefly.com</p>
+          <p><i data-lucide="phone"></i> +88 0123 332211</p>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Experience Center</h3>
+        <address>
+          Sheikh Hasina Software Park<br>
+          House 10, Road 6 & 11,<br>
+          Block C, Level 2, Banani, Dhaka
+        </address>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <i data-lucide="plane-takeoff"></i>
+        <span>TripeFly</span>
+      </div>
+      <p>&copy; Copyright TripeFly Ltd.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Tab switching functionality
+    document.querySelectorAll('.tab-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    // Trip type switching
+    document.querySelectorAll('.trip-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.trip-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    // Hot deals tab switching
+    document.querySelectorAll('.hot-deals-tab').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.hot-deals-tab').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
