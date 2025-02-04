@@ -6,15 +6,20 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
-  color: #1a1a1a;
+  color: #0f172a;
+  background-color: #f8fafc;
 }
 
 /* Navbar */
 .navbar {
-  background: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -29,10 +34,15 @@ body {
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1.25rem;
-  font-weight: bold;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #2563eb;
+  transition: transform 0.2s;
+}
+
+.nav-brand:hover {
+  transform: translateY(-1px);
 }
 
 .brand-icon {
@@ -44,84 +54,118 @@ body {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .language-selector {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  color: #4b5563;
+  gap: 0.5rem;
+  color: #64748b;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.language-selector:hover {
+  background: #f1f5f9;
+  color: #0f172a;
 }
 
 .notification-icon {
-  color: #4b5563;
+  color: #64748b;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.notification-icon:hover {
+  background: #f1f5f9;
+  color: #0f172a;
 }
 
 .sign-in-btn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   background: #2563eb;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
 }
 
 .sign-in-btn:hover {
   background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
 }
 
 /* Hero section */
 .hero {
   position: relative;
-  height: 500px;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .hero img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  z-index: -1;
 }
 
 /* Booking card */
 .booking-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 900px;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .booking-tabs {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #f1f5f9;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 
 .tab-btn {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   background: none;
-  color: #4b5563;
+  color: #64748b;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -129,118 +173,133 @@ body {
 .tab-btn.active {
   background: #2563eb;
   color: white;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
 }
 
 .trip-types {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .trip-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  background: none;
-  color: #4b5563;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: white;
+  color: #64748b;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .trip-btn.active {
-  background: #dbeafe;
+  background: #eff6ff;
   color: #2563eb;
+  border-color: #2563eb;
 }
 
 .search-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  position: relative;
 }
 
 .form-group label {
+  display: block;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #4b5563;
+  color: #64748b;
+  margin-bottom: 0.5rem;
 }
 
 .form-group input,
 .form-group select {
-  padding: 0.5rem 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  outline: none;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: white;
+  color: #0f172a;
+  font-size: 1rem;
   transition: all 0.2s;
 }
 
 .form-group input:focus,
 .form-group select:focus {
   border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
 }
 
 .search-btn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.75rem;
+  width: auto;
   margin: 0 auto;
-  padding: 0.75rem 2rem;
+  padding: 1rem 3rem;
   background: #2563eb;
   color: white;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  font-size: 1.125rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
 }
 
 .search-btn:hover {
   background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
 }
 
 /* Hot Deals Section */
 .hot-deals {
   max-width: 1280px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
 }
 
 .hot-deals-header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .hot-deals-tabs {
   display: flex;
-  gap: 1rem;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 0.5rem;
+  gap: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1rem;
 }
 
 .hot-deals-tab {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border: none;
   background: none;
-  color: #6b7280;
-  cursor: pointer;
+  color: #64748b;
   font-weight: 500;
-  transition: color 0.2s;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
 }
 
 .hot-deals-tab.active {
   color: #2563eb;
-  position: relative;
 }
 
 .hot-deals-tab.active::after {
   content: '';
   position: absolute;
-  bottom: -0.5rem;
+  bottom: -1rem;
   left: 0;
   width: 100%;
   height: 2px;
@@ -249,43 +308,50 @@ body {
 
 .hot-deals-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }
 
 .hot-deal-card {
-  background: #fff;
-  border-radius: 0.75rem;
+  background: white;
+  border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s;
+}
+
+.hot-deal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .hot-deal-content {
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .discount-badge {
-  background: #1e40af;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
   color: white;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
   text-align: center;
-  min-width: 80px;
+  min-width: 100px;
   height: fit-content;
 }
 
 .discount-percent {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 700;
   display: block;
+  line-height: 1;
 }
 
 .discount-text {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   opacity: 0.9;
+  margin-top: 0.25rem;
 }
 
 .deal-info {
@@ -293,91 +359,99 @@ body {
 }
 
 .deal-info h3 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #1e40af;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .deal-info p {
-  color: #6b7280;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .expiry {
-  color: #6b7280;
-  font-size: 0.875rem;
+  color: #64748b;
   font-weight: 500;
 }
 
 .learn-more {
   background: #fde047;
   color: #1e40af;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 
 .learn-more:hover {
   background: #fcd34d;
+  transform: translateX(4px);
 }
 
 /* Featured deals */
 .featured-deals {
   max-width: 1280px;
-  margin: 4rem auto;
-  padding: 0 1rem;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
 }
 
 .featured-deals h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #0f172a;
 }
 
 .deals-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
 .deal-card {
   background: white;
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s;
+  transition: all 0.3s;
 }
 
 .deal-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .deal-card img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.deal-card:hover img {
+  transform: scale(1.05);
 }
 
 .deal-content {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .deal-content h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
 }
 
 .deal-price {
@@ -387,43 +461,43 @@ body {
 }
 
 .price {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 700;
   color: #2563eb;
 }
 
 .discount {
   background: #fee2e2;
   color: #dc2626;
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 1rem;
   border-radius: 9999px;
-  font-size: 0.875rem;
   font-weight: 500;
 }
 
 /* Special Offers Section */
 .special-offers {
   background: #f8fafc;
-  padding: 4rem 0;
+  padding: 6rem 0;
+  margin: 4rem 0;
 }
 
 .special-offers-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .special-offers-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .special-offers-header h2 {
   font-size: 2rem;
-  font-weight: bold;
-  color: #1e3a8a;
+  font-weight: 700;
+  color: #0f172a;
 }
 
 .special-offers-tabs {
@@ -436,7 +510,7 @@ body {
 }
 
 .special-offers-tab {
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 2rem;
   border: none;
   border-radius: 9999px;
   background: transparent;
@@ -447,30 +521,31 @@ body {
 }
 
 .special-offers-tab.active {
-  background: #1e3a8a;
+  background: #2563eb;
   color: white;
 }
 
 .special-offers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
 .special-offer-card {
   background: white;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s;
+  transition: all 0.3s;
 }
 
 .special-offer-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .offer-image {
-  height: 200px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -486,13 +561,13 @@ body {
 }
 
 .offer-content {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .offer-content h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1e3a8a;
+  color: #0f172a;
   margin-bottom: 1.5rem;
   line-height: 1.4;
 }
@@ -500,42 +575,24 @@ body {
 .learn-more-btn {
   display: inline-flex;
   align-items: center;
-  background: #ffd700;
-  color: #1e3a8a;
+  background: #fde047;
+  color: #1e40af;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s;
 }
 
 .learn-more-btn:hover {
-  background: #ffc800;
+  background: #fcd34d;
   transform: translateX(4px);
-}
-
-@media (max-width: 768px) {
-  .special-offers-header {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-
-  .special-offers-tabs {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .special-offers-tab {
-    padding: 0.5rem 1rem;
-  }
 }
 
 /* Newsletter Banner */
 .newsletter-banner {
-  background: linear-gradient(135deg, #1e3a8a 0%, #000051 100%);
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
   padding: 6rem 0;
-  margin-top: 4rem;
   color: white;
   position: relative;
   overflow: hidden;
@@ -555,7 +612,7 @@ body {
 .newsletter-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   position: relative;
   z-index: 1;
   display: flex;
@@ -566,14 +623,14 @@ body {
 }
 
 .newsletter-text h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .newsletter-text p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
   opacity: 0.9;
   max-width: 600px;
@@ -581,7 +638,7 @@ body {
 
 .newsletter-features {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
   margin-top: 2rem;
 }
@@ -589,7 +646,7 @@ body {
 .feature {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .feature i {
@@ -609,13 +666,19 @@ body {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s;
+}
+
+.input-group:focus-within {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .input-group i {
   color: rgba(255, 255, 255, 0.6);
-  margin-right: 0.75rem;
+  margin-right: 1rem;
 }
 
 .input-group input {
@@ -634,13 +697,14 @@ body {
 .subscribe-btn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   background: #60a5fa;
   color: #1e3a8a;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
   font-weight: 500;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -652,16 +716,17 @@ body {
 
 /* Promo Banner */
 .promo-banner {
-  background: linear-gradient(135deg, #000051 0%, #1e3a8a 100%);
-  padding: 4rem 0;
-  margin: 4rem 0;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  padding: 6rem 0;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .promo-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -672,32 +737,33 @@ body {
 }
 
 .promo-text h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .promo-text p {
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
   opacity: 0.9;
 }
 
 .app-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .app-btn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   background: rgba(255, 255, 255, 0.1);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -715,30 +781,31 @@ body {
 .promo-image img {
   width: 100%;
   height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 /* Footer */
 .footer {
-  background: #000051;
+  background: #0f172a;
   color: white;
-  padding: 4rem 0 2rem;
+  padding: 6rem 0 2rem;
 }
 
 .footer-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .footer-section h3 {
   font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 .footer-section ul {
@@ -746,25 +813,26 @@ body {
 }
 
 .footer-section ul li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .footer-section ul li a {
-  color: #cbd5e1;
+  color: #94a3b8;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
 
 .footer-section ul li a:hover {
   color: white;
+  transform: translateX(4px);
 }
 
 .payment-methods {
-  margin-top: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  width: 100%;
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .payment-methods img {
@@ -776,48 +844,53 @@ body {
 }
 
 .contact-info {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .contact-info p {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #cbd5e1;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: #94a3b8;
 }
 
 .social-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .social-links a {
-  color: white;
+  color: #94a3b8;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.2s;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .social-links a:hover {
-  color: #60a5fa;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .footer-bottom {
   max-width: 1280px;
-  margin: 2rem auto 0;
-  padding: 2rem 1rem 0;
+  margin: 4rem auto 0;
+  padding: 2rem 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #cbd5e1;
+  color: #94a3b8;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   color: white;
 }
 
@@ -847,7 +920,7 @@ body {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .hot-deals-tabs {
@@ -859,7 +932,7 @@ body {
 
   .hot-deal-content {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .discount-badge {
@@ -869,7 +942,7 @@ body {
   .promo-content {
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .app-buttons {
@@ -877,7 +950,7 @@ body {
   }
 
   .promo-text h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .promo-image {
@@ -886,15 +959,27 @@ body {
 
   .newsletter-features {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
   }
 
   .newsletter-form {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   .newsletter-text h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .special-offers-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .special-offers-tabs {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
