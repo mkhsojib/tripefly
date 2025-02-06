@@ -5,8 +5,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --selective-yellow: #FBB900;
+  --congress-blue: #16538A;
+  --astronaut-blue: #0B3C5D;
+}
+
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   color: #0f172a;
   background-color: #f8fafc;
@@ -37,7 +43,7 @@ body {
   gap: 0.75rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2563eb;
+  color: var(--congress-blue);
   transition: transform 0.2s;
 }
 
@@ -48,7 +54,7 @@ body {
 .brand-icon {
   width: 2rem;
   height: 2rem;
-  color: #2563eb;
+  color: var(--congress-blue);
 }
 
 .nav-right {
@@ -90,7 +96,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: #2563eb;
+  background: var(--congress-blue);
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -98,13 +104,13 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(22, 83, 138, 0.1);
 }
 
 .sign-in-btn:hover {
-  background: #1d4ed8;
+  background: var(--astronaut-blue);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(22, 83, 138, 0.2);
 }
 
 /* Hero section */
@@ -129,7 +135,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  background: linear-gradient(to bottom, rgba(11, 60, 93, 0.3), rgba(11, 60, 93, 0.6));
   z-index: -1;
 }
 
@@ -140,7 +146,7 @@ body {
   background: rgba(255, 255, 255, 0.95);
   padding: 2rem;
   border-radius: 1.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(11, 60, 93, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -171,9 +177,9 @@ body {
 }
 
 .tab-btn.active {
-  background: #2563eb;
+  background: var(--congress-blue);
   color: white;
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(22, 83, 138, 0.1);
 }
 
 .trip-types {
@@ -195,8 +201,8 @@ body {
 
 .trip-btn.active {
   background: #eff6ff;
-  color: #2563eb;
-  border-color: #2563eb;
+  color: var(--congress-blue);
+  border-color: var(--congress-blue);
 }
 
 .search-form {
@@ -232,8 +238,8 @@ body {
 
 .form-group input:focus,
 .form-group select:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: var(--congress-blue);
+  box-shadow: 0 0 0 3px rgba(22, 83, 138, 0.1);
   outline: none;
 }
 
@@ -245,7 +251,7 @@ body {
   width: auto;
   margin: 0 auto;
   padding: 1rem 3rem;
-  background: #2563eb;
+  background: var(--congress-blue);
   color: white;
   border: none;
   border-radius: 1rem;
@@ -253,13 +259,13 @@ body {
   font-size: 1.125rem;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(22, 83, 138, 0.1);
 }
 
 .search-btn:hover {
-  background: #1d4ed8;
+  background: var(--astronaut-blue);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(22, 83, 138, 0.2);
 }
 
 /* Hot Deals Section */
@@ -293,7 +299,7 @@ body {
 }
 
 .hot-deals-tab.active {
-  color: #2563eb;
+  color: var(--congress-blue);
 }
 
 .hot-deals-tab.active::after {
@@ -303,7 +309,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #2563eb;
+  background: var(--congress-blue);
 }
 
 .hot-deals-grid {
@@ -316,13 +322,13 @@ body {
   background: white;
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
 }
 
 .hot-deal-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .hot-deal-content {
@@ -332,7 +338,7 @@ body {
 }
 
 .discount-badge {
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, var(--congress-blue) 0%, var(--astronaut-blue) 100%);
   color: white;
   padding: 1rem;
   border-radius: 1rem;
@@ -361,7 +367,7 @@ body {
 .deal-info h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1e40af;
+  color: var(--congress-blue);
   margin-bottom: 1rem;
 }
 
@@ -384,8 +390,8 @@ body {
 }
 
 .learn-more {
-  background: #fde047;
-  color: #1e40af;
+  background: var(--selective-yellow);
+  color: var(--astronaut-blue);
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 0.75rem;
@@ -395,7 +401,8 @@ body {
 }
 
 .learn-more:hover {
-  background: #fcd34d;
+  background: var(--selective-yellow);
+  opacity: 0.9;
   transform: translateX(4px);
 }
 
@@ -410,7 +417,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  color: #0f172a;
+  color: var(--astronaut-blue);
 }
 
 .deals-grid {
@@ -423,13 +430,13 @@ body {
   background: white;
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
 
 .deal-card:hover {
   transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .deal-card img {
@@ -451,7 +458,7 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #0f172a;
+  color: var(--astronaut-blue);
 }
 
 .deal-price {
@@ -463,7 +470,7 @@ body {
 .price {
   font-size: 2rem;
   font-weight: 700;
-  color: #2563eb;
+  color: var(--congress-blue);
 }
 
 .discount {
@@ -497,7 +504,7 @@ body {
 .special-offers-header h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--astronaut-blue);
 }
 
 .special-offers-tabs {
@@ -521,7 +528,7 @@ body {
 }
 
 .special-offers-tab.active {
-  background: #2563eb;
+  background: var(--congress-blue);
   color: white;
 }
 
@@ -535,13 +542,13 @@ body {
   background: white;
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
 
-.special-offer-card:hover {
+.special-offer .special-offer-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .offer-image {
@@ -567,7 +574,7 @@ body {
 .offer-content h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--astronaut-blue);
   margin-bottom: 1.5rem;
   line-height: 1.4;
 }
@@ -575,8 +582,8 @@ body {
 .learn-more-btn {
   display: inline-flex;
   align-items: center;
-  background: #fde047;
-  color: #1e40af;
+  background: var(--selective-yellow);
+  color: var(--astronaut-blue);
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
   font-weight: 500;
@@ -585,13 +592,14 @@ body {
 }
 
 .learn-more-btn:hover {
-  background: #fcd34d;
+  background: var(--selective-yellow);
+  opacity: 0.9;
   transform: translateX(4px);
 }
 
 /* Newsletter Banner */
 .newsletter-banner {
-  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  background: linear-gradient(135deg, var(--congress-blue) 0%, var(--astronaut-blue) 100%);
   padding: 6rem 0;
   color: white;
   position: relative;
@@ -650,7 +658,7 @@ body {
 }
 
 .feature i {
-  color: #60a5fa;
+  color: var(--selective-yellow);
 }
 
 .newsletter-form {
@@ -698,8 +706,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: #60a5fa;
-  color: #1e3a8a;
+  background: var(--selective-yellow);
+  color: var(--astronaut-blue);
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 1rem;
@@ -710,13 +718,13 @@ body {
 }
 
 .subscribe-btn:hover {
-  background: #93c5fd;
+  opacity: 0.9;
   transform: translateY(-2px);
 }
 
 /* Promo Banner */
 .promo-banner {
-  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  background: linear-gradient(135deg, var(--congress-blue) 0%, var(--astronaut-blue) 100%);
   padding: 6rem 0;
   color: white;
   position: relative;
@@ -787,7 +795,7 @@ body {
 
 /* Footer */
 .footer {
-  background: #0f172a;
+  background: var(--astronaut-blue);
   color: white;
   padding: 6rem 0 2rem;
 }
