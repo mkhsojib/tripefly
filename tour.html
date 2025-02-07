@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripeFly - Tours & Packages</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <i data-lucide="plane-takeoff" class="brand-icon"></i>
+        <span>TripeFly</span>
+      </div>
+      <div class="nav-right">
+        <div class="language-selector">
+          <i data-lucide="globe-2"></i>
+          <span>EN</span>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <i data-lucide="bell" class="notification-icon"></i>
+        <button class="sign-in-btn">
+          <i data-lucide="user"></i>
+          <span>Sign In</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tour Hero Section -->
+  <div class="tour-hero">
+    <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80" alt="Thailand Beach">
+    <div class="tour-hero-overlay"></div>
+    <div class="tour-hero-content">
+      <div class="destination-badge">
+        <i data-lucide="map-pin"></i>
+        <span>Thailand</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tour Content -->
+  <div class="tour-container">
+    <!-- Filter Section -->
+    <div class="tour-sidebar">
+      <div class="filter-section">
+        <h3>Filter</h3>
+        
+        <div class="filter-group">
+          <h4>City</h4>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="city" value="bangkok">
+            <span>Bangkok</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="city" value="phuket">
+            <span>Phuket</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="city" value="chiangmai">
+            <span>Chiang Mai</span>
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Days</h4>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="days" value="3">
+            <span>3 Days</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="days" value="5">
+            <span>5 Days</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="days" value="7">
+            <span>7 Days</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="days" value="8">
+            <span>8 Days</span>
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Price Range</h4>
+          <div class="price-range">
+            <input type="range" min="0" max="100000" value="50000" class="price-slider">
+            <div class="price-inputs">
+              <input type="number" value="0" class="price-input" placeholder="Min">
+              <span>-</span>
+              <input type="number" value="100000" class="price-input" placeholder="Max">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tour Packages -->
+    <div class="tour-packages">
+      <!-- Package Card -->
+      <div class="package-card">
+        <div class="package-image">
+          <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Bangkok Tour">
+          <div class="package-badge">Recommended</div>
+        </div>
+        <div class="package-content">
+          <div class="package-header">
+            <h3>Bangkok City Tour</h3>
+            <div class="package-meta">
+              <span class="package-code">PACKAGE CODE: BKK001</span>
+              <div class="package-rating">
+                <i data-lucide="star" class="star-icon"></i>
+                <span>4.8</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="package-details">
+            <div class="detail-item">
+              <i data-lucide="map-pin"></i>
+              <span>Bangkok</span>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="calendar"></i>
+              <span>5 Days</span>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="users"></i>
+              <span>Max 12 people</span>
+            </div>
+          </div>
+
+          <div class="package-features">
+            <div class="feature-item">
+              <i data-lucide="check-circle"></i>
+              <span>Hotel</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="check-circle"></i>
+              <span>Meals</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="check-circle"></i>
+              <span>Transport</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="check-circle"></i>
+              <span>Guide</span>
+            </div>
+          </div>
+
+          <div class="package-footer">
+            <div class="package-price">
+              <div class="price-label">Starting from</div>
+              <div class="price-amount">
+                <span class="original-price">BDT 98,900</span>
+                <span class="discounted-price">BDT 96,900</span>
+                <span class="per-person">Per Person</span>
+              </div>
+            </div>
+            <button class="view-details-btn">View Itinerary</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- More Package Cards -->
+      <div class="package-card">
+        <div class="package-image">
+          <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Phuket Tour">
+        </div>
+        <div class="package-content">
+          <div class="package-header">
+            <h3>Phuket Island Experience</h3>
+            <div class="package-meta">
+              <span class="package-code">PACKAGE CODE: PHK001</span>
+              <div class="package-rating">
+                <i data-lucide="star" class="star-icon"></i>
+                <span>4.9</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="package-details">
+            <div class="detail-item">
+              <i data-lucide="map-pin"></i>
+              <span>Phuket</span>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="calendar"></i>
+              <span>7 Days</span>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="users"></i>
+              <span>Max 10 people</span>
+            </div>
+          </div>
+
+          <div class="package-features">
+            <div class="feature-item">
+              <i data-lucide="check-circle"></i>
+              <span>Hotel</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="check-circle"></i>
+              <span>Meals</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="check-circle"></i>
+              <span>Transport</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="check-circle"></i>
+              <span>Guide</span>
+            </div>
+          </div>
+
+          <div class="package-footer">
+            <div class="package-price">
+              <div class="price-label">Starting from</div>
+              <div class="price-amount">
+                <span class="original-price">BDT 120,900</span>
+                <span class="discounted-price">BDT 115,900</span>
+                <span class="per-person">Per Person</span>
+              </div>
+            </div>
+            <button class="view-details-btn">View Itinerary</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Discover</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Talent & Culture</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">EMI Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Payment Methods</h3>
+        <div class="payment-methods">
+          <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Payment methods">
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Need Help?</h3>
+        <p>We're here for you 24/7! Reach out to us through:</p>
+        <div class="contact-info">
+          <p><i data-lucide="mail"></i> info@tripefly.com</p>
+          <p><i data-lucide="phone"></i> +88 0123 332211</p>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Experience Center</h3>
+        <address>
+          Sheikh Hasina Software Park<br>
+          House 10, Road 6 & 11,<br>
+          Block C, Level 2, Banani, Dhaka
+        </address>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <i data-lucide="plane-takeoff"></i>
+        <span>TripeFly</span>
+      </div>
+      <p>&copy; Copyright TripeFly Ltd.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
