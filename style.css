@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   color: #0f172a;
   background-color: #f8fafc;
@@ -76,7 +76,7 @@ body {
 
 .language-selector:hover {
   background: #f1f5f9;
-  color: #0f172a;
+  color: var(--congress-blue);
 }
 
 .notification-icon {
@@ -89,7 +89,7 @@ body {
 
 .notification-icon:hover {
   background: #f1f5f9;
-  color: #0f172a;
+  color: var(--congress-blue);
 }
 
 .sign-in-btn {
@@ -111,6 +111,11 @@ body {
   background: var(--astronaut-blue);
   transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(22, 83, 138, 0.2);
+}
+
+.sign-in-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px -1px rgba(22, 83, 138, 0.1);
 }
 
 /* Hero section */
@@ -176,10 +181,19 @@ body {
   transition: all 0.2s;
 }
 
+.tab-btn:hover {
+  background: #e2e8f0;
+  color: var(--congress-blue);
+}
+
 .tab-btn.active {
   background: var(--congress-blue);
   color: white;
   box-shadow: 0 4px 6px -1px rgba(22, 83, 138, 0.1);
+}
+
+.tab-btn.active:hover {
+  background: var(--astronaut-blue);
 }
 
 .trip-types {
@@ -199,10 +213,19 @@ body {
   transition: all 0.2s;
 }
 
+.trip-btn:hover {
+  background: #e2e8f0;
+  color: var(--congress-blue);
+}
+
 .trip-btn.active {
   background: #eff6ff;
   color: var(--congress-blue);
   border-color: var(--congress-blue);
+}
+
+.trip-btn.active:hover {
+  background: #dbeafe;
 }
 
 .search-form {
@@ -268,6 +291,11 @@ body {
   box-shadow: 0 10px 15px -3px rgba(22, 83, 138, 0.2);
 }
 
+.search-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px -1px rgba(22, 83, 138, 0.1);
+}
+
 /* Hot Deals Section */
 .hot-deals {
   max-width: 1280px;
@@ -296,6 +324,10 @@ body {
   cursor: pointer;
   transition: all 0.2s;
   position: relative;
+}
+
+.hot-deals-tab:hover {
+  color: var(--congress-blue);
 }
 
 .hot-deals-tab.active {
@@ -439,15 +471,15 @@ body {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
+.deal-card:hover img {
+  transform: scale(1.05);
+}
+
 .deal-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   transition: transform 0.3s;
-}
-
-.deal-card:hover img {
-  transform: scale(1.05);
 }
 
 .deal-content {
@@ -527,6 +559,11 @@ body {
   transition: all 0.2s;
 }
 
+.special-offers-tab:hover {
+  background: #e2e8f0;
+  color: var(--congress-blue);
+}
+
 .special-offers-tab.active {
   background: var(--congress-blue);
   color: white;
@@ -546,9 +583,13 @@ body {
   transition: all 0.3s;
 }
 
-.special-offer .special-offer-card:hover {
+.special-offer-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.special-offer-card:hover .offer-image img {
+  transform: scale(1.05);
 }
 
 .offer-image {
@@ -561,10 +602,6 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s;
-}
-
-.special-offer-card:hover .offer-image img {
-  transform: scale(1.05);
 }
 
 .offer-content {
@@ -849,6 +886,10 @@ body {
   object-fit: contain;
   border-radius: 0.5rem;
   transition: transform 0.2s;
+}
+
+.payment-methods img:hover {
+  transform: scale(1.05);
 }
 
 .contact-info {
