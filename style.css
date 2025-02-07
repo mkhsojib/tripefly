@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +15,11 @@ body {
   line-height: 1.5;
   color: #0f172a;
   background-color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
 /* Navbar */
 .navbar {
   background: rgba(255, 255, 255, 0.8);
@@ -1366,6 +1368,382 @@ body {
 
   .view-details-btn {
     width: 100%;
+  }
+}
+
+
+/* Add these new styles to your existing style.css file */
+
+/* Header Styles */
+.header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--congress-blue);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: var(--congress-blue);
+}
+
+.nav-item.active {
+  color: var(--congress-blue);
+}
+
+/* Tour Details Hero */
+.tour-details-hero {
+  background: white;
+  padding: 2rem 0;
+}
+
+.hero-gallery {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.thumbnail-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.thumbnail-grid img:hover {
+  opacity: 0.8;
+}
+
+/* Tour Details Container */
+.tour-details-container {
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+}
+
+/* Tour Header */
+.tour-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.tour-title h1 {
+  font-size: 2rem;
+  color: var(--congress-blue);
+  margin-bottom: 1rem;
+}
+
+.tour-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--selective-yellow);
+}
+
+/* Tour Tabs */
+.tour-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  background: white;
+  color: #64748b;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--congress-blue);
+  color: white;
+}
+
+/* Tour Sections */
+.tour-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--congress-blue);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.location-details {
+  margin-bottom: 1.5rem;
+}
+
+.location-details h3 {
+  color: var(--congress-blue);
+  margin-bottom: 0.5rem;
+}
+
+.location-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.location-details li {
+  margin-bottom: 0.5rem;
+  color: #64748b;
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule-list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.day {
+  font-weight: 600;
+  color: var(--congress-blue);
+  min-width: 80px;
+}
+
+.inclusion-list, .exclusion-list {
+  list-style: none;
+  padding: 0;
+}
+
+.inclusion-list li, .exclusion-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.included i {
+  color: var(--congress-blue);
+}
+
+.excluded i {
+  color: #ef4444;
+}
+
+/* Sidebar */
+.booking-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.booking-card h3 {
+  color: var(--congress-blue);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.booking-form label {
+  display: block;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.phone-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-input select {
+  width: 100px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--congress-blue);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: var(--astronaut-blue);
+}
+
+.need-help-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.need-help-card h3 {
+  color: var(--congress-blue);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.help-contacts {
+  margin-top: 1.5rem;
+}
+
+.help-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.help-contact i {
+  color: var(--congress-blue);
+}
+
+.help-contact div {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-contact span {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.help-contact strong {
+  color: var(--congress-blue);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .tour-details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-image {
+    height: 400px;
+  }
+
+  .thumbnail-grid img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .main-nav {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .tour-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .tour-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .tour-tabs {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .tab-btn {
+    white-space: nowrap;
   }
 }
 
