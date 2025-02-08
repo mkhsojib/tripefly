@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TripeFly</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Menu -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <i data-lucide="plane-takeoff"></i>
+        <span>TripeFly</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#" class="nav-item">
+          <i data-lucide="plane"></i>
+          <span>Flight</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="hotel"></i>
+          <span>Hotel</span>
+        </a>
+        <a href="tour.html" class="nav-item">
+          <i data-lucide="map"></i>
+          <span>Tour</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="stamp"></i>
+          <span>Visa</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="credit-card"></i>
+          <span>Gift Card</span>
+        </a>
+      </nav>
+      <button class="sign-in-btn">
+        <i data-lucide="user"></i>
+        <span>Sign In</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2>Login to TripeFly</h2>
+      <form class="auth-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="auth-btn">
+          <i data-lucide="log-in"></i>
+          <span>Login</span>
+        </button>
+      </form>
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="registration.html">Register here</a></p>
+        <p><a href="#">Forgot password?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Discover</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Talent & Culture</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">EMI Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Payment Methods</h3>
+        <div class="payment-methods">
+          <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Payment methods">
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Need Help?</h3>
+        <p>We're here for you 24/7! Reach out to us through:</p>
+        <div class="contact-info">
+          <p><i data-lucide="mail"></i> info@tripefly.com</p>
+          <p><i data-lucide="phone"></i> +88 0123 332211</p>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Experience Center</h3>
+        <address>
+          Sheikh Hasina Software Park<br>
+          House 10, Road 6 & 11,<br>
+          Block C, Level 2, Banani, Dhaka
+        </address>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <i data-lucide="plane-takeoff"></i>
+        <span>TripeFly</span>
+      </div>
+      <p>&copy; Copyright TripeFly Ltd.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
