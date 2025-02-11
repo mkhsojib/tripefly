@@ -1847,3 +1847,238 @@ body {
   color: var(--astronaut-blue);
 }
 
+/* Adding to existing style.css */
+
+/* Visa Page Specific Styles */
+.visa-hero {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.world-map {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visa-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.visa-search-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.visa-search-section h2 {
+  color: var(--congress-blue);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.visa-search {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.country-search {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.check-btn {
+  padding: 0.75rem 2rem;
+  background: var(--congress-blue);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.check-btn:hover {
+  background: var(--astronaut-blue);
+}
+
+.visa-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.visa-summary {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.visa-summary h3 {
+  color: var(--congress-blue);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-details {
+  margin-bottom: 2rem;
+}
+
+.summary-item {
+  margin-bottom: 1rem;
+}
+
+.summary-item .label {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.summary-item .value {
+  color: #64748b;
+  margin-left: 0.5rem;
+}
+
+.experience-center-info {
+  margin-bottom: 2rem;
+}
+
+.experience-center-info p {
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.address h4, .hotline p:first-child {
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.phone {
+  color: var(--congress-blue);
+  font-weight: 500;
+}
+
+.map-link {
+  color: var(--congress-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.document-list {
+  margin-bottom: 2rem;
+}
+
+.document-list ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.document-list li {
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+.important-notes ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.important-notes li {
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+.visa-assistance {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.assistance-form h3 {
+  color: var(--congress-blue);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.assistance-form p {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.phone-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.country-code {
+  width: 100px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--selective-yellow);
+  color: var(--congress-blue);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .visa-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .visa-hero {
+    height: 300px;
+  }
+
+  .visa-search {
+    flex-direction: column;
+  }
+
+  .check-btn {
+    width: 100%;
+  }
+}
+
